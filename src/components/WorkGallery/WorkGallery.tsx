@@ -43,8 +43,8 @@ function WorkGallery() {
           key={index}
           className={`block ${index % 2 === 1 ? 'md:mt-52' : ''}`}
         >
-          <div className="relative w-full h-screen overflow-hidden transition-transform duration-300 transform hover:scale-95 rounded-3xl">
-            <div className="absolute inset-0 transition-transform duration-300 transform hover:scale-110">
+          <div className="relative w-full h-screen overflow-hidden transition-transform duration-500 transform hover:scale-95 rounded-3xl">
+            <div className="absolute inset-0 transition-transform duration-500 transform hover:scale-110">
               <Image
                 src={work.src}
                 alt={work.company}
