@@ -1,10 +1,13 @@
-import Navbar from "@/components/Navbar/Navbar";
+import Navbar from '@/components/Navbar/Navbar'
+import WorkGallery from '@/components/WorkGallery/WorkGallery'
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main></main>
+      <main>
+        <WorkGallery />
+      </main>
     </>
-  );
+  )
 }
