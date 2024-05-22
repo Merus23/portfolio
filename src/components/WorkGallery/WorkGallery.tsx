@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
 
 function WorkGallery() {
   const works = [
@@ -33,7 +33,7 @@ function WorkGallery() {
       company: 'Archive',
       description: 'Past design adventures',
     },
-  ]
+  ];
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mx-4 gap-x-24">
@@ -61,7 +61,7 @@ function WorkGallery() {
         </Link>
       ))}
     </div>
-  )
+  );
 }
 
-export default WorkGallery
+export default WorkGallery;
