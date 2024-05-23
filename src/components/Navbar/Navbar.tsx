@@ -21,9 +21,11 @@ type Props = {
 };
 
 /**
- *
- * @param param0
- * @returns
+ * @description The Navbar component is a simple navigation bar that displays a logo and a list of items
+ * @param logo - The website logo
+ * @param items - The items to be displayed in the navbar
+ * @param itemExtraClasses - Extra classes to be added to the each item
+ * @returns The Navbar component
  */
 export default function Navbar({ logo, items, itemExtraClasses }: Props) {
   const currentPath = usePathname();
