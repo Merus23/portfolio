@@ -40,18 +40,18 @@ export default function Navbar({ logo, items, itemExtraClasses }: Props) {
       <ul></ul>
 
       <ul className={`flex justify-between`}>
-        <li className={`py-4 px-12`}>
+        <li className={`hidden md:inline py-4 px-12 `}>
           <Link href="/">LUMA Dev</Link>s
         </li>
 
-        <div className="flex">
+        <div className="flex justify-end w-full md:w-10/12">
           {items.map((item, key) => (
             <li key={key} className={`py-4 px-12`}>
               <Link
                 href={item.url}
                 className={
                   (itemExtraClasses ? itemExtraClasses : '') +
-                  'hover:border-b-2 hover:border-black transition ease-in-out duration-300'
+                  'hover:border-b-2 hover:border-black transition ease-in-out duration-300 '
                 }
               >
                 {item.title}
