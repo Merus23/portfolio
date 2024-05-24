@@ -1,3 +1,4 @@
+import AboutUs from '@/components/AboutUs/AboutUs'
 import Navbar from '@/components/Navbar/Navbar'
 import WorkGallery from '@/components/WorkGallery/WorkGallery'
 
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar logo={{ title: 'home', url: '/' }} items={items} />
       <main>
         <WorkGallery />
+        <AboutUs />
       </main>
     </>
   )

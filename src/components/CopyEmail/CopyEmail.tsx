@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { GeistSans } from 'geist/font/sans'
 
 type Props = {
   email: string
@@ -20,9 +19,9 @@ export default function CopyEmail({ email }: Props) {
 
   return (
     <div
-      className={`${GeistSans.className} text-base/tight flex flex-col w-fit justify-self-center mt-[12vw]`}
+      className={'text-base/tight flex flex-col w-fit justify-self-center mt-[12vw] max-md:mt-[15vh]'}
     >
-      <p className='font-light text-[1.375rem]'>
+      <p className='text-[1.375rem]'>
         {'Fale conosco '}
         <span className='text-[#666666]'>(Clique para copiar):</span>
       </p>
