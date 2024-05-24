@@ -1,10 +1,10 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "@/components/Navbar/Navbar";
+import type { Metadata } from 'next';
+import './globals.css';
+import Navbar from '@/components/Navbar/Navbar';
 
 export const metadata: Metadata = {
-  title: "MMMML",
-  description: "",
+  title: 'MMMML',
+  description: '',
 };
 
 export default function RootLayout({
@@ -12,14 +12,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
-  // const items = [{ title: 'Sobre', url: '/about' }];
-  
   return (
     <html lang="pt-br">
       <body>
-      <Navbar logo={{ title: 'home', url: '/' }} items={[{ title: 'Sobre', url: '/about' }]} />
-      {children}</body>
+        <Navbar
+          logo={{ title: 'home', url: '/' }}
+          item={{ title: 'Sobre', url: '/about' }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
