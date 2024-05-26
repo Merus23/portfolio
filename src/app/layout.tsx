@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body>
+      <body className="px-60">
         <Navbar
           logo={{ title: 'home', url: '/' }}
           item={{ title: 'Sobre', url: '/about' }}
