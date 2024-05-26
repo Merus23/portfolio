@@ -38,12 +38,12 @@ export default function Navbar({ logo, item, itemExtraClasses }: Props) {
       }
     >
       <ul className={`flex justify-between`}>
-        <li className={`hidden md:inline py-4 px-12 text-nowrap`}>
+        <li className={`hidden md:inline py-4 text-nowrap`}>
           <Link href="/">LUMA Dev</Link>s
         </li>
 
         <div className="flex justify-end w-full md:w-10/12">
-          <li className={`py-4 px-12`}>
+          <li className={`py-4`}>
             <Link
               href={currentPath === '/' ? '/about' : '/'}
               className={
