@@ -26,7 +26,7 @@ export default function MainText({ text }: MainTextProps) {
       transition={{ duration: 0.8, delay: 0.1 }}
       variants={itemVariants}
     >
-      <h1 className="w-full text-4xl md:text-7xl font-semibold leading-relaxed md:leading-loose">
+      <h1 className="w-full text-4xl md:text-5xl lg:text-7xl leading-normal md:leading-relaxed lg:leading-relaxed font-semibold">
         {text}
       </h1>
     </motion.div>
