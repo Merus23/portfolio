@@ -28,7 +28,7 @@ export default function WorkGallery({ works }: Props) {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mx-4 gap-x-40">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 2xl:gap-36">
       {works.map((work, index) => (
         <motion.div
           key={index}
@@ -40,7 +40,7 @@ export default function WorkGallery({ works }: Props) {
           variants={itemVariants}
         >
           <Link href={work.href}>
-            <div className="relative w-full h-640 overflow-hidden transition-transform duration-700 transform hover:scale-95 rounded-3xl">
+            <div className="relative w-full h-96 md:h-640 xl:h-screen overflow-hidden transition-transform duration-700 transform hover:scale-95 rounded-3xl">
               <div className="absolute inset-0 transition-transform duration-700 transform hover:scale-110">
                 <Image
                   src={work.src}
@@ -53,10 +53,10 @@ export default function WorkGallery({ works }: Props) {
               </div>
             </div>
             <div className="p-4 flex flex-col items-center text-center">
-              <div className="font-bold text-xl leading-tight">
+              <div className="font-bold text-xl 2xl:text-5xl leading-tight">
                 {work.company}
               </div>
-              <div className="text-gray-600 leading-relaxed">
+              <div className="text-gray-600 2xl:text-3xl leading-relaxed">
                 {work.description}
               </div>
             </div>
