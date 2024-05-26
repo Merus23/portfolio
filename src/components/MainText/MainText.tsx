@@ -19,14 +19,14 @@ export default function MainText({ text }: MainTextProps) {
 
   return (
     <motion.div
-      className="h-480 w-full max-w-7xl flex justify-center items-center"
+      className="h-480 w-full flex justify-center items-center"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: 0.1 }}
       variants={itemVariants}
     >
-      <h1 className="w-full md:text-7xl text-5xl text-wrap font-semibold leading-loose">
+      <h1 className="w-full text-4xl md:text-7xl font-semibold leading-relaxed md:leading-loose">
         {text}
       </h1>
     </motion.div>
