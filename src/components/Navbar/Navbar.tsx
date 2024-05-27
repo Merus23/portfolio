@@ -1,11 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import styles from './Navbar.module.css';
 import { StaticImageData } from 'next/image';
-
-import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
 
 import { usePathname } from 'next/navigation';
 
@@ -31,13 +27,8 @@ export default function Navbar({ logo, item, itemExtraClasses }: Props) {
   const currentPath = usePathname();
 
   return (
-    <nav
-      className={
-        GeistSans.className +
-        `flex justify-between items-center font-medium text-xl`
-      }
-    >
-      <ul className={`flex justify-between`}>
+    <nav className={`flex justify-between items-center font-medium text-xl`}>
+      <ul className={`flex justify-between w-full`}>
         <li className={`hidden md:inline py-4 text-nowrap`}>
           <Link href="/">LUMA Dev</Link>s
         </li>
