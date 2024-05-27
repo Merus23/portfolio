@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar/Navbar';
+import { GeistSans } from 'geist/font/sans';
 
 export const metadata: Metadata = {
   title: 'MMMML',
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className="px-10 lg:px-28 xl:px-40">
+      <body className={GeistSans.className + ` px-10 lg:px-28 xl:px-40`}>
         <Navbar
           logo={{ title: 'home', url: '/' }}
           item={{ title: 'Sobre', url: '/about' }}
