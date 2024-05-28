@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar/Navbar';
 import { GeistSans } from 'geist/font/sans';
+import Footer from '@/components/Footer/Footer';
 
 export const metadata: Metadata = {
   title: 'MMMML',
@@ -21,6 +22,7 @@ export default function RootLayout({
           item={{ title: 'Sobre', url: '/about' }}
         />
         {children}
+        <Footer />
       </body>
     </html>
   );
