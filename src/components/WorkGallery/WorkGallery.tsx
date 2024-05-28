@@ -1,67 +1,68 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { StaticImageData } from 'next/image';
 
-function WorkGallery() {
-  const works = [
-    {
-      href: 'work/days/',
-      src: '/images/days.webp',
-      company: 'Days',
-      description: 'iOS Countdown App',
-    },
-    {
-      href: 'work/tripscout/',
-      src: '/images/tripscout.webp',
-      company: 'Tripscout',
-      description: 'Travel Planner',
-    },
-    {
-      href: 'work/athotel/',
-      src: '/images/athotel.webp',
-      company: '@hotel',
-      description: 'Travel booking platform',
-    },
-    {
-      href: 'work/invision/',
-      src: '/images/invision.webp',
-      company: 'InVision',
-      description: 'Digital product design platform',
-    },
-    {
-      href: 'work/archive/',
-      src: '/images/archive.webp',
-      company: 'Archive',
-      description: 'Past design adventures',
-    },
-  ]
-
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mx-4 gap-x-24">
-      {works.map((work, index) => (
-        <Link
-          href={work.href}
-          key={index}
-          className={`block ${index % 2 === 1 ? 'md:mt-52' : ''}`}
-        >
-          <div className="relative w-full h-screen overflow-hidden transition-transform duration-500 transform hover:scale-95 rounded-3xl">
-            <div className="absolute inset-0 transition-transform duration-500 transform hover:scale-110">
-              <Image
-                src={work.src}
-                alt={work.company}
-                height={1000}
-                width={1000}
-                className="rounded-3xl object-cover w-full h-full"
-              />
-            </div>
-          </div>
-          <div className="p-4 flex flex-col items-center text-center">
-            <div className="font-bold text-xl">{work.company}</div>
-            <div className="text-gray-600">{work.description}</div>
-          </div>
-        </Link>
-      ))}
-    </div>
-  )
+// Definindo a interface para o item de trabalho
+interface WorkItem {
+  href: string;
+  src: string | StaticImageData;
+  company: string;
+  description: string;
 }
 
-export default WorkGallery
+// Definindo a tipo para as propriedades do componente
+type Props = {
+  works: WorkItem[];
+};
+
+/**
+ * @description The WorkGallery component displays a grid of work items with hover effects and animations
+ * @param works - Array of work items to be displayed
+ * @returns The WorkGallery component
+ */
+export default function WorkGallery({ works }: Props) {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 2xl:gap-36">
+      {works.map((work, index) => (
+        <motion.div
+          key={index}
+          className={`block ${index % 2 === 1 ? 'md:mt-64' : ''}`}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: index * 0.2 }}
+          variants={itemVariants}
+        >
+          <Link href={work.href}>
+            <div className="relative w-full h-96 md:h-640 xl:h-screen overflow-hidden transition-transform duration-700 transform hover:scale-95 rounded-3xl">
+              <div className="absolute inset-0 transition-transform duration-700 transform hover:scale-110">
+                <Image
+                  src={work.src}
+                  alt={work.company}
+                  height={1000}
+                  width={1000}
+                  className="rounded-3xl object-cover w-full h-full"
+                  priority={index === 0} // Adiciona prioridade apenas para o primeiro item
+                />
+              </div>
+            </div>
+            <div className="p-4 flex flex-col items-center text-center">
+              <div className="font-bold text-xl 2xl:text-5xl leading-tight">
+                {work.company}
+              </div>
+              <div className="text-gray-600 2xl:text-3xl leading-relaxed">
+                {work.description}
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
