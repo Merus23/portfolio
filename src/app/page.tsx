@@ -1,4 +1,5 @@
 'use client';
+import AboutUs from '@/components/AboutUs/AboutUs'
 import WorkGallery from '@/components/WorkGallery/WorkGallery';
 import MainText from '@/components/MainText/MainText';
 
@@ -41,6 +42,7 @@ export default function Home() {
       <main>
         <MainText text="Product Design. Interfaces. Systems. Strategy. UX. & More" />
         <WorkGallery works={worksData} />
+        <AboutUs />
       </main>
     </>
   );
