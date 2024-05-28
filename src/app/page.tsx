@@ -1,4 +1,5 @@
 import AboutUs from '@/components/AboutUs/AboutUs'
+import Footer from '@/components/Footer/Footer'
 import Navbar from '@/components/Navbar/Navbar'
 import WorkGallery from '@/components/WorkGallery/WorkGallery'
 
@@ -14,6 +15,7 @@ export default function Home() {
         <WorkGallery />
         <AboutUs />
       </main>
+      <Footer />
     </>
   )
 }
