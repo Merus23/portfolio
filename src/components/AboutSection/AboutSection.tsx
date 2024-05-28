@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Team from '../Team/Team';
 
 // Definindo a interface para os props do componente
 interface ExperienceSectionProps {
@@ -42,6 +43,7 @@ export default function ExperienceSection({
           {paragraph}
         </p>
       ))}
+      <Team />
     </motion.div>
   );
 }
