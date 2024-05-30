@@ -53,10 +53,10 @@ export default function WorkGallery({ works }: Props) {
               </div>
             </div>
             <div className="p-4 flex flex-col items-center text-center">
-              <div className="font-bold text-xl 2xl:text-5xl leading-tight">
+              <div className="font-bold text-xl 2xl:text-3xl leading-tight">
                 {work.company}
               </div>
-              <div className="text-gray-600 2xl:text-3xl leading-relaxed">
+              <div className="text-gray-600 2xl:text-2xl leading-relaxed">
                 {work.description}
               </div>
             </div>
