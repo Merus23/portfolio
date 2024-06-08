@@ -13,8 +13,10 @@ export default function Team({}: Props) {
         <Card />
         <Card />
         <Card />
-        <Card />
-        <Card />
+        <div className="col-span-3 flex justify-center gap-5">
+          <Card />
+          <Card />
+        </div>
       </div>
     </div>
   );
