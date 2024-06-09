@@ -20,7 +20,7 @@ export default function Team({}: Props) {
         },
         {
           link: 'https://www.linkedin.com/in/mateus-silva-893a4322b/',
-          icon: '/images/social_media_icons/twitter.svg',
+          icon: '/images/social_media_icons/linkedin.svg',
         },
       ],
     },
@@ -39,7 +39,7 @@ export default function Team({}: Props) {
         },
         {
           link: 'https://www.linkedin.com/in/mateus-silva-893a4322b/',
-          icon: '/images/social_media_icons/twitter.svg',
+          icon: '/images/social_media_icons/linkedin.svg',
         },
       ],
     },
@@ -58,7 +58,7 @@ export default function Team({}: Props) {
         },
         {
           link: 'https://www.linkedin.com/in/mateus-silva-893a4322b/',
-          icon: '/images/social_media_icons/twitter.svg',
+          icon: '/images/social_media_icons/linkedin.svg',
         },
       ],
     },
@@ -77,7 +77,7 @@ export default function Team({}: Props) {
         },
         {
           link: 'https://www.linkedin.com/in/mateus-silva-893a4322b/',
-          icon: '/images/social_media_icons/twitter.svg',
+          icon: '/images/social_media_icons/linkedin.svg',
         },
       ],
     },
@@ -96,7 +96,7 @@ export default function Team({}: Props) {
         },
         {
           link: 'https://www.linkedin.com/in/mateus-silva-893a4322b/',
-          icon: '/images/social_media_icons/twitter.svg',
+          icon: '/images/social_media_icons/linkedin.svg',
         },
       ],
     },
