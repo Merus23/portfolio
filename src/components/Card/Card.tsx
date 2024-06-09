@@ -2,13 +2,27 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+export interface NetWork {
+  link: string;
+  icon: string;
+}
+export interface Member {
+  name: string;
+  role: string;
+  image: string;
+  networks: NetWork[];
+}
+
 type Props = {
-  css?: string;
+  cssMainDiv?: string;
+  member?: Member;
 };
 
-export default function Card({ css }: Props) {
+export default function Card({ cssMainDiv, member }: Props) {
   return (
-    <div className={css + ` w-full max-w-72 bg-white rounded-lg shadow-xl`}>
+    <div
+      className={cssMainDiv + ` w-full max-w-72 bg-white rounded-lg shadow-xl`}
+    >
       <div className="flex flex-col items-center pb-6 pt-4">
         <Image
           className="w-24 h-24 mb-3 rounded-full shadow-lg"
