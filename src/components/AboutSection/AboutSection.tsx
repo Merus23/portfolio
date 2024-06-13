@@ -32,20 +32,18 @@ export default function ExperienceSection({
       transition={{ duration: 0.8, delay: 0.1 }}
       variants={itemVariants}
     >
-      <main>
-        <h2 className="font-medium text-3xl md:text-4xl lg:text-5xl leading-tight mt-14 mb-10">
-          {title}
-        </h2>
-        {paragraphs.map((paragraph, index) => (
-          <p
-            key={index}
-            className="font-light text-base md:text-lg lg:text-xl leading-snug mb-10"
-          >
-            {paragraph}
-          </p>
-        ))}
-        <Team />
-      </main>
+      <h2 className="font-medium text-3xl md:text-4xl lg:text-5xl leading-tight mt-14 mb-10">
+        {title}
+      </h2>
+      {paragraphs.map((paragraph, index) => (
+        <p
+          key={index}
+          className="font-light text-base md:text-lg lg:text-xl leading-snug mb-10"
+        >
+          {paragraph}
+        </p>
+      ))}
+      <Team />
     </motion.div>
   );
 }
