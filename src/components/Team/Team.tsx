@@ -146,13 +146,18 @@ export default function Team({}: Props) {
         {members.map((member, index) => {
           if (index === members.length - 2 && members.length % 2 !== 0) {
             return (
-              <div className="col-span-3 flex justify-center gap-5">
-                <Card member={member} />
-                <Card member={members[index + 1]} />
+              <div
+                key={index}
+                className="md:col-span-3 w-full flex justify-center"
+              >
+                <div className="grid grid-cols-1 w-480 md:grid-cols-2 gap-6">
+                  <Card member={member} />
+                  <Card member={members[index + 1]} />
+                </div>
               </div>
             );
           } else if (index !== members.length - 1 || members.length % 2 === 0) {
-            return <Card member={member} />;
+            return <Card key={index} member={member} />;
           }
         })}
       </div>
