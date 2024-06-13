@@ -21,7 +21,9 @@ type Props = {
 export default function Card({ cssMainDiv, member }: Props) {
   return (
     <div
-      className={cssMainDiv + ` w-full max-w-72 bg-white rounded-lg shadow-xl`}
+      className={
+        cssMainDiv && '' + ` w-full max-w-72 bg-white rounded-lg shadow-xl`
+      }
     >
       <div className="flex flex-col items-center pb-6 pt-4">
         <Image
@@ -31,12 +33,10 @@ export default function Card({ cssMainDiv, member }: Props) {
           width={1000}
           alt=""
         />
-        <h5 className="mb-1 text-lg font-medium text-gray-900 dark:text-white">
+        <h5 className="mb-1 text-lg font-medium text-gray-900">
           {member.name}
         </h5>
-        <span className="text-sm text-gray-500 dark:text-gray-400">
-          {member.role}
-        </span>
+        <span className="text-sm text-gray-500">{member.role}</span>
         <div className="flex mt-4 md:mt-6 gap-3">
           {member.networks.map((network, index) => {
             return (
@@ -46,7 +46,7 @@ export default function Card({ cssMainDiv, member }: Props) {
                 href={network.link}
                 className="max-w-8 hover:scale-110"
               >
-                <img src={network.icon} alt="" />
+                <Image src={network.icon} width={500} height={500} alt="" />
               </Link>
             );
           })}

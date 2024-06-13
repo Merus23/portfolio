@@ -25,7 +25,7 @@ export default function ExperienceSection({
 
   return (
     <motion.div
-      className="py-[4vh] box-border max-w-[780px]"
+      className="py-[4vh] box-border w-full md:max-w-[780px]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
